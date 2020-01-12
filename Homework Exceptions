@@ -1,0 +1,26 @@
+print ('Введите пользовательскую нотацию для двух положительных чисел')
+operate = input ('Введите оператор: ')
+number1 = int(input ('Введите первое положительное число: '))
+number2 = int(input ('Введите второе положительное число: '))
+
+assert (operate == '+' or operate == '-' or operate == '*' or operate == '/'), 'Введен не арифметический оператор!'
+
+    
+try:      
+  if operate == '+':
+    print (number1 + number2)
+  elif operate == '-':
+    print (number1 - number2)
+  elif operate == '*':
+    print (number1 * number2)
+  elif operate == '/':
+    print (number1 / number2)
+  elif operate == '/':
+      try:
+        print (number1 / number2
+      except ZeroDivisionError:
+        print ('На ноль делить нельзя!')  
+except (ValueError, TypeError):
+  print ('Неправильно введены данные!')
+except AttributeError:
+  print ('Введены не все значения!')   
